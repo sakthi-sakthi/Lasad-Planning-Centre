@@ -18,16 +18,16 @@ const Header = () => {
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-5 col-5">
-                            <ul class="top-social-media pull-right">
+                        <div className="col-lg-4 col-md-4 col-sm-5 col-5">
+                            <ul className="top-social-media pull-right">
                                 <li>
-                                    <a href="/" class="social-icon facebook"><i class="fa fa-facebook text-white"></i></a>
+                                    <a href="/" className="social-icon facebook"><i className="fa fa-facebook text-white"></i></a>
                                 </li>
                                 <li>
-                                    <a href="/" class="social-icon twitter"><i class="fa fa-twitter text-white"></i></a>
+                                    <a href="/" className="social-icon twitter"><i className="fa fa-twitter text-white"></i></a>
                                 </li>
                                 <li>
-                                    <a href="/" class="social-icon instagram"><i class="fa fa-instagram text-white"></i></a>
+                                    <a href="/" className="social-icon instagram"><i className="fa fa-instagram text-white"></i></a>
                                 </li>
                             </ul>
                         </div>

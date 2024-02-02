@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { ApiUrl } from '../API/Api';
 import { Link } from 'react-router-dom';
+import { ApiUrl } from '../../API/Api';
 
-const MenuBar = () => {
+const MainMenuBar = () => {
     const [menuData, setMenuData] = useState([]);
     const [isHeaderFixed, setHeaderFixed] = useState(false);
 
@@ -112,4 +112,4 @@ const MenuBar = () => {
     );
 };
 
-export default MenuBar;
+export default MainMenuBar;

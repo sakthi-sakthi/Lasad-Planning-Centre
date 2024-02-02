@@ -51,9 +51,9 @@ const OurStaff = () => {
                                                     <a href="/">{staff.title}</a>
                                                 </h3>
                                                 <p>{staff.content}</p>
-                                                <p><i class="fa fa-envelope"></i>&nbsp;<a href={`mailto:${staff.email}`}>{staff.email}</a>
+                                                <p><i className="fa fa-envelope"></i>&nbsp;<a href={`mailto:${staff.email}`}>{staff.email}</a>
                                                 </p>
-                                                <p><i class="fa fa-phone"></i>&nbsp;<a href={`tel:${staff.phone}`}>{staff.phone}</a></p>
+                                                <p><i className="fa fa-phone"></i>&nbsp;<a href={`tel:${staff.phone}`}>{staff.phone}</a></p>
                                                 <div className="member-socials">
                                                     <a href="/">
                                                         <i className="fa fa-facebook facebook-color" />

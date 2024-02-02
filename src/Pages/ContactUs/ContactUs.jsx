@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import MenuBar from '../../Components/MenuBar';
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import "react-toastify/dist/ReactToastify.css";
@@ -46,12 +43,6 @@ const ContactUs = () => {
                     title: 'Success!',
                     text: 'Message sent successfully',
                 });
-                setFormData({
-                    name: "",
-                    email: "",
-                    mobile: "",
-                    message: "",
-                });
             })
             .catch((error) => {
                 Swal.fire({
@@ -65,6 +56,15 @@ const ContactUs = () => {
             });
 
     };
+
+    useEffect(() => {
+        setFormData({
+            name: "",
+            email: "",
+            mobile: "",
+            message: "",
+        });
+    }, [loading]);
 
     const validateName = (name) => {
         if (!/^[A-Za-z\s]+$/.test(name)) {
@@ -104,8 +104,6 @@ const ContactUs = () => {
 
     return (
         <>
-            <Header />
-            <MenuBar />
             <div className="sub-banner">
                 <div className="container">
                     <div className="breadcrumb-area">
@@ -253,15 +251,13 @@ const ContactUs = () => {
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.941293393926!2d78.63016157575179!3d12.586120823211065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3badaaea950786f3%3A0x5f3b489cca9a30a2!2sBosco%20Soft%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1706699278369!5m2!1sen!2sin"
                             title='benilde'
                             style={{ border: 0 }}
-                            allowfullscreen=""
+                            allowFullScreen=""
                             loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
+                            referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </>
     )
 }
