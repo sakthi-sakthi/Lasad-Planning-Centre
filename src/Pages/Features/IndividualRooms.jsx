@@ -68,4 +68,5 @@ const IndividualRooms = () => {
         </div>
     );
 }
+
 export default IndividualRooms

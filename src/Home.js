@@ -25,18 +25,20 @@ const Home = () => {
     };
     fetchData();
   }, []);
+
+  console.log(homedata);
   return (
     <>
       <Header />
       <MenuBar menudata={homedata?.headermenudata} />
       <SliderImage sliderdata={homedata?.SlidesData} />
       <AboutHome />
-      <HomeRooms projectdata={homedata?.upcomingevents} />
+      <HomeRooms projectdata={homedata?.projectdata} />
       <HomeContact />
       <br />
       <br />
       <OurFacilities />
-      <AllDetails />
+      <AllDetails testimonials={homedata?.testmonialdata} />
       <Footer />
     </>
   );

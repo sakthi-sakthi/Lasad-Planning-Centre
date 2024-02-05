@@ -95,10 +95,11 @@ const MainMenuBar = () => {
             <header className={`main-header ${isHeaderFixed ? 'fixed-header' : ''}`} id="main-header-1">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light">
-                        <Link className="navbar-brand logos" to="/">
-                            <h2 style={{ color: "black", fontWeight: "bold", marginBottom: "0" }}>BENILDE</h2>
-                            <span style={{ color: "black", fontWeight: "bold" }}>RESOURCE CENTRE</span>
-                        </Link>
+                        <div className="header-left">
+                            <a className="navbar-brand logos" href="/">
+                                <img src="/img/BenildeLogo.png" alt="logo" />
+                            </a>
+                        </div>
                         <button className="navbar-toggler" id="drawer" type="button" onClick={handleToggle}>
                             <span className="fa fa-bars" />
                         </button>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -44,19 +45,23 @@ const Footer = () => {
                                     </div>
                                     <ul className="links">
                                         <li>
-                                            <a href="rooms-col-3.html" className='hoverlinkcolor'>Home</a>
+                                            <Link to={"/"} className="hoverlinkcolor">Home</Link>
                                         </li>
                                         <li>
-                                            <a href="rooms-details.html" className='hoverlinkcolor'>About Us</a>
+                                            <Link to={"/aboutus"} className="hoverlinkcolor">About Us</Link>
+
                                         </li>
                                         <li>
-                                            <a href="rooms-col-2.html" className='hoverlinkcolor'>Features</a>
+                                            <Link to={"/features"} className="hoverlinkcolor">Features</Link>
+
                                         </li>
                                         <li>
-                                            <a href="/" className='hoverlinkcolor'>Services</a>
+                                            <Link to={"/services"} className="hoverlinkcolor">Services</Link>
+
                                         </li>
                                         <li>
-                                            <a href="rooms-col-3.html" className='hoverlinkcolor'>Contact Us</a>
+                                            <Link to={"/contactus"} className="hoverlinkcolor">Contact Us</Link>
+
                                         </li>
                                     </ul>
                                 </div>
@@ -68,19 +73,22 @@ const Footer = () => {
                                     </div>
                                     <ul className="links">
                                         <li>
-                                            <a href="about.html" className='hoverlinkcolor'>Retreat</a>
+                                            <Link to={"/retreat"} className="hoverlinkcolor">Retreat</Link>
                                         </li>
                                         <li>
-                                            <a href="blog-right-sidebar.html" className='hoverlinkcolor'>Seminars</a>
+                                            <Link to={"/seminars"} className="hoverlinkcolor">Seminars</Link>
+
                                         </li>
                                         <li>
-                                            <a href="booking-system.html" className='hoverlinkcolor'>Meetings</a>
+                                            <Link to={"/meetings"} className="hoverlinkcolor">Meetings</Link>
+
                                         </li>
                                         <li>
-                                            <a href="gallery-3column.html" className='hoverlinkcolor'>Recollections</a>
+                                            <Link to={"/recollections"} className="hoverlinkcolor">Recollections</Link>
+
                                         </li>
                                         <li>
-                                            <a href="contact.html" className='hoverlinkcolor'>Programmes</a>
+                                            <Link to={"/programmes"} className="hoverlinkcolor">Programmes</Link>
                                         </li>
                                     </ul>
                                 </div>

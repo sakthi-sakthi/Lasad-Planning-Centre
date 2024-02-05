@@ -1,28 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { ApiUrl } from '../API/Api';
+import React from 'react';
 
-const SliderImage = () => {
-    const [sliderData, setSliderData] = useState([]);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchSliderData = async () => {
-            try {
-                const response = await axios.get(`${ApiUrl}/get/slider/1`);
-                setSliderData(response?.data?.data);
-            } catch (error) {
-                setError(error.message);
-            }
-        };
-
-        fetchSliderData();
-    }, []);
-
-    if (error) {
-        return <div>Error fetching slider data: {error}</div>;
-    }
-
+const SliderImage = ({ sliderdata }) => {
     return (
         <>
             <div className="banner" id="banner1">
@@ -32,13 +11,13 @@ const SliderImage = () => {
                     data-bs-ride="carousel"
                 >
                     <div className="carousel-inner">
-                        {sliderData.map((item, index) => (
+                        {sliderdata?.map((item, index) => (
                             <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                                 <img
                                     className="d-block w-100 img-fluid"
                                     src={item.image}
                                     alt={`banner-${index}`}
-                                    style={{ height: "750px", maxHeight: "100%" }}
+                                    style={{ height: "580px", maxHeight: "100%" }}
                                     id="HomeSlider"
                                 />
                                 <div className="carousel-caption banner-slider-inner d-flex h-100">

@@ -68,4 +68,5 @@ const Dormitories = () => {
     </div>
   );
 }
+
 export default Dormitories

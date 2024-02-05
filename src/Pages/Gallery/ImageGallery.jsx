@@ -34,10 +34,10 @@ const ImageGallery = () => {
                             data-category="3, 2, 1, 4"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-1.jpg"
-                                        alt="image"
+                                        alt="g1"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -53,10 +53,10 @@ const ImageGallery = () => {
                             data-category="3, 4, 2"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-2.jpg"
-                                        alt="image"
+                                        alt="g2"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -72,10 +72,10 @@ const ImageGallery = () => {
                             data-category="1, 4, 3"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-3.jpg"
-                                        alt="image"
+                                        alt="g3"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -91,10 +91,10 @@ const ImageGallery = () => {
                             data-category="2, 1, 3"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-4.jpg"
-                                        alt="image"
+                                        alt="g4"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -110,10 +110,10 @@ const ImageGallery = () => {
                             data-category="3, 1, 2"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-5.jpg"
-                                        alt="image"
+                                        alt="g5"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -129,10 +129,10 @@ const ImageGallery = () => {
                             data-category="4, 2, 1"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-6.jpg"
-                                        alt="image"
+                                        alt="g6"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -148,10 +148,10 @@ const ImageGallery = () => {
                             data-category="5, 2, 3"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-1.jpg"
-                                        alt="image"
+                                        alt="g7"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -167,10 +167,10 @@ const ImageGallery = () => {
                             data-category="4, 1, 2"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-2.jpg"
-                                        alt="image"
+                                        alt="g8"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -186,10 +186,10 @@ const ImageGallery = () => {
                             data-category="4, 2, 1"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-3.jpg"
-                                        alt="image"
+                                        alt="g9"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -205,10 +205,10 @@ const ImageGallery = () => {
                             data-category="1, 4, 4"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-4.jpg"
-                                        alt="image"
+                                        alt="g10"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -224,10 +224,10 @@ const ImageGallery = () => {
                             data-category="4, 1, 3"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-5.jpg"
-                                        alt="image"
+                                        alt="g11"
                                         className="img-fluid w-100"
                                     />
                                 </a>
@@ -243,10 +243,10 @@ const ImageGallery = () => {
                             data-category="3, 2, 4"
                         >
                             <figure className="portofolio-thumb">
-                                <a href="#">
+                                <a href="/">
                                     <img
                                         src="img/room/img-6.jpg"
-                                        alt="image"
+                                        alt="g12"
                                         className="img-fluid w-100"
                                     />
                                 </a>

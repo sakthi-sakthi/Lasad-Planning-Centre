@@ -17,6 +17,7 @@ import Recollections from "./Pages/Services/Recollections";
 import Programmes from "./Pages/Services/Programmes";
 import MainLayout from "./layout";
 import ImageGallery from "./Pages/Gallery/ImageGallery";
+import OurRoomDetails from "./Pages/RoomsDetails/OurRoomDetails";
 
 function App() {
   return (
@@ -24,7 +25,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/*" element={<MainLayout />}>
-          {/* Features Sub Pages Routing */}
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="individualroom" element={<IndividualRooms />} />
           <Route path="dormitory" element={<Dormitories />} />
@@ -34,14 +34,13 @@ function App() {
           <Route path="prayerroom" element={<PrayerRoom />} />
           <Route path="meditationhall" element={<MeditationHall />} />
           <Route path="wifi" element={<WifiConnection />} />
-
-          {/* Services Sub Pages Routing */}
           <Route path="retreats" element={<Retreats />} />
           <Route path="seminars" element={<Seminars />} />
           <Route path="meetings" element={<Meetings />} />
           <Route path="recollections" element={<Recollections />} />
           <Route path="programmes" element={<Programmes />} />
           <Route path="gallery" element={<ImageGallery />} />
+          <Route path="roomdetails" element={<OurRoomDetails />} />
           <Route path="contactus" element={<ContactUs />} />
         </Route>
       </Routes>
