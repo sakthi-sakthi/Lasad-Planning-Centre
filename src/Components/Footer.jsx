@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import CookieConsent from 'react-cookie-consent';
 
-const Footer = () => {
+const Footer = ({ menudata }) => {
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
     useEffect(() => {
@@ -10,8 +11,77 @@ const Footer = () => {
         }, 1000 * 60);
         return () => clearInterval(intervalId);
     }, []);
+    // eslint-disable-next-line
+    const [showBanner, setShowBanner] = useState(!localStorage.getItem('Benilde-Resource-Centre'));
+    const location = useLocation();
+
+    useEffect(() => {
+        localStorage.setItem('currentPage', location.pathname);
+    }, [location]);
+
+    const handleAccept = () => {
+        localStorage.setItem('Benilde-Resource-Centre', 'true');
+        setShowBanner(false);
+    };
+
+    useEffect(() => {
+        const handleBeforeUnload = () => {
+            localStorage.removeItem('Benilde-Resource-Centre');
+            localStorage.removeItem('currentPage');
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, []);
+
+
+    const itemWithId3 = menudata?.find(item => item.id === 3);
+    let filteredChildren = [];
+    if (itemWithId3) {
+        filteredChildren = itemWithId3.children?.filter(child => ![3, 7].includes(child.id)) || [];
+    }
+
+    const servicesData = [
+        {
+            link: filteredChildren[0]?.url,
+            title: "Individual Rooms",
+        },
+        {
+            link: filteredChildren[1]?.url,
+            title: "AC Rooms",
+        },
+        {
+            link: filteredChildren[2]?.url,
+            title: "Conference Hall",
+        },
+        {
+            link: filteredChildren[3]?.url,
+            title: "Small Dormitories",
+        },
+        {
+            link: filteredChildren[4]?.url,
+            title: "Prayer Rooms",
+        },
+        {
+            link: filteredChildren[5]?.url,
+            title: "Free Wi-Fi",
+        }
+    ];
     return (
         <>
+            <CookieConsent
+                location="bottom"
+                buttonText="Accept"
+                cookieName="Benilde-Resource-Centre"
+                style={{ background: "#333" }}
+                buttonStyle={{ color: "#fff", fontSize: "13px" }}
+                onAccept={handleAccept}
+            >
+                This website uses cookies to enhance the user experience.
+            </CookieConsent>
             <footer className="main-footer clearfix">
                 <div className="container">
                     <div className="footer-info">
@@ -52,11 +122,7 @@ const Footer = () => {
 
                                         </li>
                                         <li>
-                                            <Link to={"/features"} className="hoverlinkcolor">Features</Link>
-
-                                        </li>
-                                        <li>
-                                            <Link to={"/services"} className="hoverlinkcolor">Services</Link>
+                                            <Link to={"/gallery"} className="hoverlinkcolor">Gallery</Link>
 
                                         </li>
                                         <li>
@@ -72,24 +138,11 @@ const Footer = () => {
                                         <h1>Services</h1>
                                     </div>
                                     <ul className="links">
-                                        <li>
-                                            <Link to={"/retreat"} className="hoverlinkcolor">Retreat</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/seminars"} className="hoverlinkcolor">Seminars</Link>
-
-                                        </li>
-                                        <li>
-                                            <Link to={"/meetings"} className="hoverlinkcolor">Meetings</Link>
-
-                                        </li>
-                                        <li>
-                                            <Link to={"/recollections"} className="hoverlinkcolor">Recollections</Link>
-
-                                        </li>
-                                        <li>
-                                            <Link to={"/programmes"} className="hoverlinkcolor">Programmes</Link>
-                                        </li>
+                                        {servicesData?.map(service => (
+                                            <li key={service.id}>
+                                                <Link to={service.link} className="hoverlinkcolor">{service.title}</Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>

@@ -10,6 +10,7 @@ import HomeContact from "./Components/HomeContact";
 import Footer from "./Components/Footer";
 import { ApiUrl } from "./API/Api";
 import axios from "axios";
+import Features from "./Components/Features";
 
 const Home = () => {
   const [homedata, setHomedata] = useState(null);
@@ -25,8 +26,6 @@ const Home = () => {
     };
     fetchData();
   }, []);
-
-  console.log(homedata);
   return (
     <>
       <Header />
@@ -37,9 +36,12 @@ const Home = () => {
       <HomeContact />
       <br />
       <br />
-      <OurFacilities />
+      <OurFacilities menudata={homedata?.headermenudata} />
       <AllDetails testimonials={homedata?.testmonialdata} />
-      <Footer />
+      <br />
+      <br />
+      <Features />
+      <Footer menudata={homedata?.headermenudata} />
     </>
   );
 };

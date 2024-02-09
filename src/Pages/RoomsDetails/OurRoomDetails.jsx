@@ -5,7 +5,7 @@ import { ApiUrl } from "../../API/Api";
 
 const OurRoomDetails = () => {
     const search = useLocation().search;
-    const RoomId = new URLSearchParams(search).get("roomId");
+    const RoomId = new URLSearchParams(search).get("serviceid");
     const [homedata, setHomedata] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
@@ -71,34 +71,7 @@ const OurRoomDetails = () => {
                                                     Description
                                                 </button>
                                             </li>
-                                            <li className="nav-item" role="presentation">
-                                                <button
-                                                    className="nav-link"
-                                                    id="profile-tab"
-                                                    data-bs-toggle="tab"
-                                                    data-bs-target="#profile"
-                                                    type="button"
-                                                    role="tab"
-                                                    aria-controls="profile"
-                                                    aria-selected="false"
-                                                >
-                                                    Amenities
-                                                </button>
-                                            </li>
-                                            <li className="nav-item" role="presentation">
-                                                <button
-                                                    className="nav-link"
-                                                    id="contact-tab"
-                                                    data-bs-toggle="tab"
-                                                    data-bs-target="#contact"
-                                                    type="button"
-                                                    role="tab"
-                                                    aria-controls="contact"
-                                                    aria-selected="false"
-                                                >
-                                                    House Rules
-                                                </button>
-                                            </li>
+
                                             <li className="nav-item" role="presentation">
                                                 <button
                                                     className="nav-link"
@@ -127,112 +100,8 @@ const OurRoomDetails = () => {
                                                 >
                                                     <div className="accordion-item">
                                                         <div className="rooms-description mb-50">
-                                                            <h3>Rooms Description</h3>
+                                                            <h3> Description</h3>
                                                             <p dangerouslySetInnerHTML={{ __html: RoomDataById?.content }}></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                className="tab-pane fade mb-30"
-                                                id="profile"
-                                                role="tabpanel"
-                                                aria-labelledby="profile-tab"
-                                            >
-                                                <div
-                                                    className="accordion accordion-flush"
-                                                    id="accordionFlushExample2"
-                                                >
-                                                    <div className="accordion-item">
-                                                        <div className="amenities">
-                                                            <h3>Amenities</h3>
-                                                            <div className="row">
-                                                                <div className="col-md-4 col-sm-4 col-xs-12">
-                                                                    <ul className="condition">
-                                                                        <li>
-                                                                            <i className="flaticon-air-conditioning" />
-                                                                            Air conditioning
-                                                                        </li>
-                                                                        <li>
-                                                                            <i className="flaticon-bed" />Individual Bedroom
-                                                                        </li>
-                                                                        <li>
-                                                                            <i className="flaticon-person-learning-by-reading" />
-                                                                            Free Newspaper
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div className="col-md-4 col-sm-4 col-xs-12">
-                                                                    <ul className="condition">
-                                                                        <li>
-                                                                            <i className="flaticon-graph-line-screen" />
-                                                                            TV
-                                                                        </li>
-                                                                        <li>
-                                                                            <i className="flaticon-no-smoking-sign" />
-                                                                            No Smoking
-                                                                        </li>
-                                                                        <li>
-                                                                            <i className="flaticon-room-service" />
-                                                                            Room Service
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div className="col-md-4 col-sm-4 col-xs-12">
-                                                                    <ul className="condition">
-
-                                                                        <li>
-                                                                            <i className="flaticon-breakfast" />
-                                                                            Breakfast
-                                                                        </li>
-                                                                        <li>
-                                                                            <i className="flaticon-phone-receiver" />
-                                                                            Telephone
-                                                                        </li>
-                                                                        <li>
-                                                                            <i className="flaticon-wifi-connection-signal-symbol" />
-                                                                            Free Wi-Fi
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                className="tab-pane fade mb-50"
-                                                id="contact"
-                                                role="tabpanel"
-                                                aria-labelledby="contact-tab"
-                                            >
-                                                <div
-                                                    className="accordion accordion-flush"
-                                                    id="accordionFlushExample3"
-                                                >
-                                                    <div className="accordion-item">
-                                                        <div className="house-rules">
-                                                            <h3>House Rules</h3>
-                                                            <ul>
-                                                                <li>
-                                                                    <i className="fa fa-hand-o-right" /> Check-in:
-                                                                    10:00 AM - 7:00 PM
-                                                                </li>
-                                                                <li>
-                                                                    <i className="fa fa-hand-o-right" /> Checkout:
-                                                                    11:00 AM
-                                                                </li>
-                                                                <li>
-                                                                    <i className="fa fa-hand-o-right" /> No smoking
-                                                                </li>
-                                                                <li>
-                                                                    <i className="fa fa-hand-o-right" /> No pets
-                                                                </li>
-                                                                <li>
-                                                                    <i className="fa fa-hand-o-right" /> No parties or
-                                                                    events
-                                                                </li>
-                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>

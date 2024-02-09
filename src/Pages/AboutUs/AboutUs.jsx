@@ -34,8 +34,9 @@ const AboutUs = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${ApiUrl}/get/Pages`);
+        const response = await axios.get(`${ApiUrl}/get/Pages/1`);
         setData(response?.data?.data);
+        console.log(response.data.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -54,21 +55,13 @@ const AboutUs = () => {
     return <NoDataContainer><b>No History Data Available</b></NoDataContainer>;
   }
 
-  const filteredData = data.filter(item => item.id === 1);
-
-  if (filteredData.length === 0) {
-    return <NoDataContainer><b>No matching data found</b></NoDataContainer>;
-  }
-
   return (
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
-          {filteredData.map(item => (
-            <div key={item.id}>
-              <StyledContent dangerouslySetInnerHTML={{ __html: `<style>table { width: 100%; max-width: 100%; border-collapse: collapse; } table, th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } @media (max-width: 600px) { table, th, td { display: block; width: 100%; box-sizing: border-box; } } </style>${item.content}` }} />
-            </div>
-          ))}
+          <div className='mt-4'>
+            <StyledContent dangerouslySetInnerHTML={{ __html: `${data[0].content}` }} />
+          </div>
         </div>
       </div>
     </div>
