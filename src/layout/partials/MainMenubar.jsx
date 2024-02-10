@@ -105,6 +105,9 @@ const MainMenuBar = () => {
                         </button>
                         <div className="navbar-collapse collapse w-100 justify-content-end" id="navbar">
                             <ul className="navbar-nav ml-auto">{renderMenuItems(menuData)}</ul>
+                            <a href="Broucher.pdf" className="btn-1 comon-btn" download>
+                                <span>Brochure&nbsp;<i className="fa fa-download"></i></span>
+                            </a>
                         </div>
                     </nav>
                 </div>

@@ -64,10 +64,6 @@ const Footer = ({ menudata }) => {
         {
             link: filteredChildren[4]?.url,
             title: "Prayer Rooms",
-        },
-        {
-            link: filteredChildren[5]?.url,
-            title: "Free Wi-Fi",
         }
     ];
     return (
@@ -128,6 +124,11 @@ const Footer = ({ menudata }) => {
                                         <li>
                                             <Link to={"/contactus"} className="hoverlinkcolor">Contact Us</Link>
 
+                                        </li>
+                                        <li>
+                                            <a href="Broucher.pdf" className="hoverlinkcolor" download>
+                                                <span>Brochure</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>

@@ -87,7 +87,7 @@ const ImageGallery = () => {
                         </li>
                         {categories?.map((member, index) => (
                             <li
-                                data-filter={member.id}{...console.log(member.id)}
+                                data-filter={member.id}
                                 className={`${member.id === idd ? "active" : ""
                                     } btn btn-inline filtr-button filtr`}
                                 onClick={() => handleClick(member.id)}>
@@ -102,13 +102,11 @@ const ImageGallery = () => {
                                 data-category={item.category_id}
                                 key={item.id}>
                                 <figure className="portofolio-thumb">
-                                    <a href="/">
-                                        <img
-                                            src={item.image}
-                                            alt="g2"
-                                            className="img-fluid w-100"
-                                        />
-                                    </a>
+                                    <img
+                                        src={item.image}
+                                        alt="g2"
+                                        className="img-fluid w-100"
+                                    />
                                     <figcaption>
                                         <div className="figure-content">
                                             <h3 className="title">{item.date}</h3><h4 className="title">{item.title}</h4>

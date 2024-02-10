@@ -11,10 +11,13 @@ import Footer from "./Components/Footer";
 import { ApiUrl } from "./API/Api";
 import axios from "axios";
 import Features from "./Components/Features";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Home = () => {
   const [homedata, setHomedata] = useState(null);
-
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/919943339446", "_blank");
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,6 +29,7 @@ const Home = () => {
     };
     fetchData();
   }, []);
+
   return (
     <>
       <Header />
@@ -42,6 +46,24 @@ const Home = () => {
       <br />
       <Features />
       <Footer menudata={homedata?.headermenudata} />
+      <div
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          left: "20px",
+          zIndex: "999",
+          border: "3px solid #25D366",
+          borderRadius: "50%",
+          padding: "8px",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <FaWhatsapp
+          size={30}
+          style={{ cursor: "pointer", color: "#25D366" }}
+          onClick={handleWhatsAppClick}
+        />
+      </div>
     </>
   );
 };
