@@ -207,6 +207,7 @@ const ContactUs = () => {
                                     <div className="row">
                                         <div className="col-lg-6 col-md-6">
                                             <div className="form-group name">
+                                                <label>Enter your Name <span className="errocolor">*</span></label><br /><br />
                                                 <input
                                                     type="text"
                                                     name="name"
@@ -221,6 +222,7 @@ const ContactUs = () => {
                                         </div>
                                         <div className="col-lg-6 col-md-6">
                                             <div className="form-group number">
+                                                <label>Enter your Mobile Number <span className="errocolor">*</span></label><br /><br />
                                                 <PhoneInput
                                                     country={'in'}
                                                     value={formData.mobile}
@@ -234,6 +236,7 @@ const ContactUs = () => {
                                         </div>
                                         <div className="col-lg-12 col-md-6">
                                             <div className="form-group email">
+                                                <label>Enter your Email Address <span className="errocolor">*</span></label><br /><br />
                                                 <input
                                                     type="email"
                                                     name="email"
@@ -248,6 +251,7 @@ const ContactUs = () => {
 
                                         <div className="col-lg-12 col-md-12">
                                             <div className="form-group message">
+                                                <label>Enter your Message <span className="errocolor">*</span></label><br /><br />
                                                 <textarea
                                                     className="form-control"
                                                     name="message"

@@ -57,13 +57,6 @@ const AllDetails = ({ testimonials }) => {
                                         <center><i className="fa fa-quote-left pe-2" /></center>
                                         <span dangerouslySetInnerHTML={{ __html: testimonial.content }} />
                                     </p>
-                                    <ul className="list-unstyled d-flex justify-content-center">
-                                        {Array.from({ length: testimonial.rating }).map((_, starIndex) => (
-                                            <li key={starIndex}>
-                                                <i className="fa fa-star fa-sm text-info" />
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
                             </div>
                         </div>

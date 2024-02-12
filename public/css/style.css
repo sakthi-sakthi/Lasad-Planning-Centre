@@ -9483,3 +9483,7 @@ span.flatpickr-weekday {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.errocolor {
+  color: red !important;
+}
