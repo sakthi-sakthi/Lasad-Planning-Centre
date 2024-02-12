@@ -215,6 +215,7 @@ const ContactUs = () => {
                                                     value={formData.name}
                                                     aria-label="Full Name"
                                                     onChange={handleChange}
+                                                    autoFocus={true}
                                                 />
                                             </div>
                                         </div>
@@ -227,7 +228,6 @@ const ContactUs = () => {
                                                     placeholder="Mobile Number"
                                                     inputProps={{
                                                         name: 'mobile',
-                                                        autoFocus: true,
                                                     }}
                                                 />
                                             </div>
